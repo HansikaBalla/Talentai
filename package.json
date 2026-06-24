@@ -1,0 +1,17 @@
+{
+  "name": "talentai-app",
+  "version": "1.0.0",
+  "description": "AI Resume Screening & Candidate Ranking System",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" --names \"API,UI\" --prefix-colors \"cyan,magenta\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "seed": "npm --prefix backend run seed",
+    "build": "npm --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
